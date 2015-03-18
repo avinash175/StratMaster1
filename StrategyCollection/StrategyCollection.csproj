@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BD047E4C-DAD5-4A33-9C38-34ED9D0B5055}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StrategyCollection</RootNamespace>
+    <AssemblyName>StrategyCollection</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accord.Statistics">
+      <HintPath>..\Accord.NET Framework-2.1.6\Release\Accord.Statistics.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BollingerStrategy.cs" />
+    <Compile Include="BPStrategy.cs" />
+    <Compile Include="BuyLosersOverNightStrategy.cs" />
+    <Compile Include="CandleStickStrategy.cs" />
+    <Compile Include="CCIStrategy.cs" />
+    <Compile Include="ChaikinStrategy.cs" />
+    <Compile Include="ConsolidationStrategy.cs" />
+    <Compile Include="TrianglePatternStrategy2.cs" />
+    <Compile Include="DojiBreakOutStrategy.cs" />
+    <Compile Include="EntropyStrategy.cs" />
+    <Compile Include="ErgodicStrategy.cs" />
+    <Compile Include="ExampleStrategy.cs" />
+    <Compile Include="FlashStrategy.cs" />
+    <Compile Include="ForceIndexStrategy.cs" />
+    <Compile Include="FRAMAStrategy.cs" />
+    <Compile Include="FVEStrategy.cs" />
+    <Compile Include="GravityStrategy.cs" />
+    <Compile Include="HMMStrategy.cs" />
+    <Compile Include="LongShortStrategy.cs" />
+    <Compile Include="LuxorModified.cs" />
+    <Compile Include="LuxorStrategy.cs" />
+    <Compile Include="MACDStrategy.cs" />
+    <Compile Include="MAMAStrategy.cs" />
+    <Compile Include="MassIndexStrategy.cs" />
+    <Compile Include="MomentumStrategy.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RangeTradingStrategy.cs" />
+    <Compile Include="RedGreen.cs" />
+    <Compile Include="REIStrategy.cs" />
+    <Compile Include="ReversalStrategy.cs" />
+    <Compile Include="RSIStrategy.cs" />
+    <Compile Include="SensexNIFTYStrategy.cs" />
+    <Compile Include="SpikeTradingStrategy.cs" />
+    <Compile Include="StormFuzzyStrategy.cs" />
+    <Compile Include="StormStrategy.cs" />
+    <Compile Include="TestStrategy.cs" />
+    <Compile Include="TrianglePatternStrategy.cs" />
+    <Compile Include="TrixStrategy.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonLib\CommonLib\CommonLib.csproj">
+      <Project>{FC8E9624-712B-4255-BF68-5E24FAD2CFE4}</Project>
+      <Name>CommonLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DotFuzzy\DotFuzzy.csproj">
+      <Project>{946246C1-80BC-4CDE-8834-74CF4EA799A2}</Project>
+      <Name>DotFuzzy</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
